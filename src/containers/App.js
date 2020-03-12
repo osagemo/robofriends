@@ -1,8 +1,8 @@
 import React from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
-import CardList from "./CardList";
-import SearchBox from "./SearchBox";
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox";
 import "./App.css";
 
 export default class App extends React.Component {
@@ -25,11 +25,12 @@ export default class App extends React.Component {
         this.setState({ searchField: event.target.value });
     };
     render() {
-        const filteredRobots = this.state.robots.filter(robot => {
-            return robot.name.toLowerCase().includes(this.state.searchField);
+        const { robots, searchField } = this.state;
+        const filteredRobots = robots.filter(robot => {
+            return robot.name.toLowerCase().includes(searchField);
         });
 
-        if (this.state.robots.length === 0) {
+        if (!robots.length) {
             return <h1>Fetching users...</h1>;
         }
 
