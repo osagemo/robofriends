@@ -1,5 +1,6 @@
 import React from "react";
-import Scroll from "./Scroll";
+import SimpleBar from "simplebar-react";
+import "simplebar/dist/simplebar.min.css";
 import CardList from "./CardList";
 import SearchBox from "./SearchBox";
 import "./App.css";
@@ -36,9 +37,9 @@ export default class App extends React.Component {
             <div className="tc">
                 <h1 className="f1">RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchChange} />
-                <Scroll>
+                <SimpleBar style={{ maxHeight: "75vh" }}>
                     <CardList robots={filteredRobots} />
-                </Scroll>
+                </SimpleBar>
             </div>
         );
     }
