@@ -1,6 +1,7 @@
 import React from "react";
 import SimpleBar from "simplebar-react";
 import "simplebar/dist/simplebar.min.css";
+import ErrorBoundry from "../components/ErrorBoundry";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import "./App.css";
@@ -39,7 +40,9 @@ export default class App extends React.Component {
                 <h1 className="f1">RoboFriends</h1>
                 <SearchBox searchChange={this.onSearchChange} />
                 <SimpleBar style={{ maxHeight: "75vh" }}>
-                    <CardList robots={filteredRobots} />
+                    <ErrorBoundry>
+                        <CardList robots={filteredRobots} />
+                    </ErrorBoundry>
                 </SimpleBar>
             </div>
         );
