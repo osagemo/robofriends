@@ -5,7 +5,6 @@ export default class Header extends PureComponent {
   //   return false;
   // }
   render() {
-    console.log("Header");
     return (
       <Fragment>
         <CounterButton color="red" />

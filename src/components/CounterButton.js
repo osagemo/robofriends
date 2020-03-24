@@ -22,7 +22,6 @@ export default class CounterButton extends Component {
     });
   };
   render() {
-    console.log("Counterbutton");
     return (
       <div>
         <button color={this.props.color} onClick={this.updateCount}>
