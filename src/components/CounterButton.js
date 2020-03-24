@@ -21,7 +21,6 @@ export default class CounterButton extends Component {
       return { count: state.count + 1 };
     });
   };
-
   render() {
     console.log("Counterbutton");
     return (

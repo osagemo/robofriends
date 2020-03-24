@@ -9,6 +9,13 @@ import "tachyons";
 import "./index.css";
 import App from "./containers/App";
 import * as serviceWorker from "./serviceWorker";
+if (process.env.NODE_ENV === "development") {
+  // Special import because using ES6 Classes
+  const whyDidYouRender = require("@welldone-software/why-did-you-render/dist/no-classes-transpile/umd/whyDidYouRender.min.js");
+  whyDidYouRender(React, {
+    trackAllPureComponents: true
+  });
+}
 
 const logger = createLogger();
 const rootReducer = combineReducers({ searchRobots, requestRobots });

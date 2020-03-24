@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from "react";
+import React, { PureComponent, Fragment } from "react";
 import CounterButton from "./CounterButton";
-export default class Header extends Component {
+export default class Header extends PureComponent {
   // shouldComponentUpdate(nextProps, nextState) {
   //   return false;
   // }
@@ -9,7 +9,7 @@ export default class Header extends Component {
     return (
       <Fragment>
         <CounterButton color="red" />
-        <h1 className="f1">RoboFriends</h1>;
+        <h1 className="f1">RoboFriends</h1>
       </Fragment>
     );
   }
