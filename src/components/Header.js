@@ -7,7 +7,7 @@ export default class Header extends PureComponent {
   render() {
     return (
       <Fragment>
-        <CounterButton color="red" />
+        <CounterButton color="blue" />
         <h1 className="f1">RoboFriends</h1>
       </Fragment>
     );

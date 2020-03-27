@@ -1,8 +1,8 @@
 import { shallow } from "enzyme";
 import React from "react";
-import Card from "./Card";
+import Header from "./Header";
 
 it("expect to render Card component", () => {
-  const wrapper = shallow(<Card />);
+  const wrapper = shallow(<Header />);
   expect(wrapper).toMatchSnapshot();
 });

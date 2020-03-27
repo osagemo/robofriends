@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render CardList component with mock users 1`] = `
+<Fragment>
+  <Card
+    email="abc@abc.se"
+    id={1}
+    key="1"
+    name="Kalle King"
+  />
+  <Card
+    email="mk@gårpåtå.nu"
+    id={2}
+    key="2"
+    name="Apkungen"
+  />
+</Fragment>
+`;

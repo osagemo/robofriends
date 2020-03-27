@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render MainPage 1`] = `
+<div
+  className="tc"
+>
+  <Header />
+  <SearchBox
+    searchChange={[MockFunction]}
+  />
+  <SimpleBar
+    style={
+      Object {
+        "maxHeight": "75vh",
+      }
+    }
+  >
+    <ErrorBoundry>
+      <CardList
+        robots={Array []}
+      />
+    </ErrorBoundry>
+  </SimpleBar>
+</div>
+`;
