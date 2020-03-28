@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ErrorBoundry from "../components/ErrorBoundry";
+import ErrorBoundary from "./ErrorBoundary";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Header from "../components/Header";
@@ -31,9 +31,9 @@ export default class MainPage extends Component {
         <Header />
         <SearchBox searchChange={onSearchChange} />
         <SimpleBar style={{ maxHeight: "75vh" }}>
-          <ErrorBoundry>
+          <ErrorBoundary>
             <CardList robots={filteredRobots} />
-          </ErrorBoundry>
+          </ErrorBoundary>
         </SimpleBar>
       </div>
     );

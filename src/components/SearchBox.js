@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SearchBox({ searchField, searchChange }) {
+export default function SearchBox({ searchChange }) {
   return (
     <div className="pa2">
       <input
