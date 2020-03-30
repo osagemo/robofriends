@@ -1,6 +1,11 @@
 import React, { PureComponent, Fragment } from "react";
+import { IRobot } from "../types";
 
-export default class Card extends PureComponent {
+interface ICardProps extends IRobot {}
+
+interface ICardState {}
+
+export default class Card extends PureComponent<ICardProps, ICardState> {
   render() {
     const { name, email, id } = this.props;
     return (

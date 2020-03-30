@@ -3,7 +3,7 @@ import {
   REQUEST_ROBOTS_FAILED,
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS
-} from "./constants.js";
+} from "./constants";
 
 import configureStore from "redux-mock-store";
 import fetchMock from "fetch-mock";
@@ -37,7 +37,7 @@ describe("fetchRobots", () => {
       { type: REQUEST_ROBOTS_SUCCESS, payload: user }
     ];
     const store = mockStore();
-    return store.dispatch(actions.fetchRobots()).then(() => {
+    return store.dispatch(actions.thunkFetchRobots()).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
   });
@@ -46,7 +46,7 @@ describe("fetchRobots", () => {
     fetchMock.mock("https://jsonplaceholder.typicode.com/users", 500);
     const store = mockStore();
 
-    return store.dispatch(actions.fetchRobots()).then(() => {
+    return store.dispatch(actions.thunkFetchRobots()).then(() => {
       expect(store.getActions()[0]).toEqual({ type: REQUEST_ROBOTS_PENDING });
       expect(store.getActions()[1].payload).toBeInstanceOf(Error);
       expect(store.getActions()[1].type).toEqual(REQUEST_ROBOTS_FAILED);

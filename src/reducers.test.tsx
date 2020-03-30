@@ -3,7 +3,7 @@ import {
   REQUEST_ROBOTS_FAILED,
   REQUEST_ROBOTS_PENDING,
   REQUEST_ROBOTS_SUCCESS
-} from "./constants.js";
+} from "./constants";
 
 import * as reducers from "./reducers";
 

@@ -8,7 +8,23 @@ import SimpleBar from "simplebar-react";
 import "./MainPage.css";
 import "simplebar/dist/simplebar.min.css";
 
-export default class MainPage extends Component {
+export interface IRobot {
+  name: string;
+  id: number;
+  email: string;
+}
+
+interface IMainPageProps {}
+
+interface IMainPageState {
+  robots: Array<IRobot>;
+  searchField: string;
+}
+
+export default class MainPage extends Component<
+  IMainPageProps,
+  IMainPageState
+> {
   componentDidMount() {
     this.props.onRequestRobots();
   }
