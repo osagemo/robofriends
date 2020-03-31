@@ -11,7 +11,7 @@ const searchChange = text => {
 };
 
 beforeEach(() => {
-  wrapper = shallow(<SearchBox searchChange={searchChange} />);
+  wrapper = shallow(<SearchBox onSearchChange={searchChange} />);
 });
 
 it("renders correctly", () => {

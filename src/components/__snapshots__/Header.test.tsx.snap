@@ -2,9 +2,7 @@
 
 exports[`expect to render Card component 1`] = `
 <Fragment>
-  <CounterButton
-    color="blue"
-  />
+  <CounterButton />
   <h1
     className="f1"
   >

@@ -1,6 +1,13 @@
 import React from "react";
+import { RoboActionTypes } from "../types";
 
-export default function SearchBox({ searchChange }) {
+interface ISearchBoxProps {
+  onSearchChange: (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => RoboActionTypes;
+}
+
+const SearchBox: React.FC<ISearchBoxProps> = ({ onSearchChange }) => {
   return (
     <div className="pa2">
       <input
@@ -8,8 +15,10 @@ export default function SearchBox({ searchChange }) {
         className="pa3 ba b--green bg-lightest-blue"
         type="search"
         placeholder="search robots"
-        onChange={searchChange}
+        onChange={onSearchChange}
       />
     </div>
   );
-}
+};
+
+export default SearchBox;

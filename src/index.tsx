@@ -5,7 +5,7 @@ import store from "./store";
 import "tachyons";
 import "./index.css";
 import App from "./containers/App";
-import * as serviceWorker from "./serviceWorker";
+import * as serviceWorker from "./serviceWorker.js";
 if (process.env.NODE_ENV === "development") {
   // Special import because using ES6 Classes
   const whyDidYouRender = require("@welldone-software/why-did-you-render/dist/no-classes-transpile/umd/whyDidYouRender.min.js");

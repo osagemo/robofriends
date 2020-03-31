@@ -6,7 +6,7 @@ exports[`expect to render MainPage 1`] = `
 >
   <Header />
   <SearchBox
-    searchChange={[MockFunction]}
+    onSearchChange={[MockFunction]}
   />
   <SimpleBar
     style={
@@ -15,11 +15,11 @@ exports[`expect to render MainPage 1`] = `
       }
     }
   >
-    <ErrorBoundry>
+    <ErrorBoundary>
       <CardList
         robots={Array []}
       />
-    </ErrorBoundry>
+    </ErrorBoundary>
   </SimpleBar>
 </div>
 `;

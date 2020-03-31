@@ -24,6 +24,12 @@ interface SetSearchFieldAction {
   payload: string;
 }
 
-interface FetchRobotsAction {}
+interface FetchRobotsAction {
+  type:
+    | typeof REQUEST_ROBOTS_FAILED
+    | typeof REQUEST_ROBOTS_PENDING
+    | typeof REQUEST_ROBOTS_SUCCESS;
+  payload?: Array<IRobot> | string;
+}
 
-export type RoboActionTypes = SetSearchFieldAction;
+export type RoboActionTypes = SetSearchFieldAction | FetchRobotsAction;

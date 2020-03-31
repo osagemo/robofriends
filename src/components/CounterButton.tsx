@@ -1,14 +1,23 @@
 import React, { Component } from "react";
 
-export default class CounterButton extends Component {
-  constructor(props) {
+interface ICounterButtonProps {}
+
+interface ICounterButtonState {
+  count: number;
+}
+
+export default class CounterButton extends Component<
+  ICounterButtonProps,
+  ICounterButtonState
+> {
+  constructor(props: ICounterButtonProps) {
     super(props);
     this.state = {
       count: 0
     };
   }
 
-  shouldComponentUpdate(nextState) {
+  shouldComponentUpdate(nextState: ICounterButtonState) {
     if (this.state.count !== nextState.count) {
       return true;
     } else {
@@ -24,11 +33,7 @@ export default class CounterButton extends Component {
   render() {
     return (
       <div>
-        <button
-          id="counter"
-          color={this.props.color}
-          onClick={this.updateCount}
-        >
+        <button id="counter" onClick={this.updateCount}>
           Count: {this.state.count}
         </button>
       </div>

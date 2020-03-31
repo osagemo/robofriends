@@ -20,7 +20,7 @@ const initialStateRobots: RobotsState = {
 export const searchRobots = (
   state = initialStateSearch,
   action: RoboActionTypes
-) => {
+): SearchFieldState => {
   switch (action.type) {
     case CHANGE_SEARCH_FIELD:
       return { ...state, searchField: action.payload };
@@ -29,15 +29,25 @@ export const searchRobots = (
   }
 };
 
-export const requestRobots = (state = initialStateRobots, action = {}) => {
+export const requestRobots = (
+  state = initialStateRobots,
+  action: RoboActionTypes
+): RobotsState => {
   switch (action.type) {
     case REQUEST_ROBOTS_PENDING:
       return Object.assign({}, state, { isPending: true });
     case REQUEST_ROBOTS_SUCCESS:
-      // Using spread operator instead
-      return { ...state, robots: action.payload, isPending: false };
+      // return { ...state, robots: action.payload, isPending: false };
+      return Object.assign({}, state, {
+        robots: action.payload,
+        isPending: false
+      });
     case REQUEST_ROBOTS_FAILED:
-      return { ...state, error: action.payload, isPending: false };
+      // return { ...state, error: action.payload, isPending: false };
+      return Object.assign({}, state, {
+        error: action.payload,
+        isPending: false
+      });
     default:
       return state;
   }
