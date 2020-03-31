@@ -1,10 +1,7 @@
 import React from "react";
-import { RoboActionTypes } from "../types";
 
 interface ISearchBoxProps {
-  onSearchChange: (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => RoboActionTypes;
+  onSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const SearchBox: React.FC<ISearchBoxProps> = ({ onSearchChange }) => {
