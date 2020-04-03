@@ -19,8 +19,8 @@ export default class MainPage extends Component {
     );
 
   render() {
-    const { onSearchChange, robots, isPending } = this.props;
-    const filteredRobots = this.filterRobots(robots);
+    const { onSearchChange, isPending } = this.props;
+    const filteredRobots = this.filterRobots();
 
     if (isPending) {
       return <h1>Fetching users...</h1>;
